@@ -12,6 +12,7 @@ ul {
 
 html {
   font: normal 16px Roboto;
+  font-family: 'Roboto', sans-serif;
   color: #555;
 }
 
@@ -63,7 +64,7 @@ hr {
 }
 
 section h3.title, h3.title {
-  font: bold 'Roboto-Regular', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   margin: 20px;
 }
