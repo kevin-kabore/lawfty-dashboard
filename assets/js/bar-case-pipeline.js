@@ -46,12 +46,14 @@ var myChart = new Chart(ctx, {
             xAxes: [{
               stacked: true,
               ticks: {
-                // min: 3,
-
+                max: 100,
                 // beginAtZero: true,
-                display: false
+                // display: false
               },
               gridLines: {
+                display: false
+              },
+              angleLines: {
                 display: false
               }
             }],
@@ -63,6 +65,7 @@ var myChart = new Chart(ctx, {
 
                 },
                 gridLines: {
+                  drawBorder: false,
                   display: false
                 }
             }]

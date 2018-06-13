@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Vintage View Dashboard</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
   </head>
-  <body id="conversionRatePage">
+  <body id="cost-per-signed-page">
     <header class="menu-bar">
       <div>
         <h3><a class="nav-link" href="../index.html">LAWFTY</a></h3>
@@ -20,8 +20,8 @@
       </div>
       <ul>
         <li>GA UX Students</li>
-        <li></li>
-        <li></li>
+        <li><i class="fas fa-user"></i></li>
+        <li><i class="fas fa-sign-out-alt"></i></li>
       </ul>
     </header>
 
@@ -35,7 +35,7 @@
     </div>
 
     <section class="dashboard-header">
-      <h3 class="title">Blackburn and Straus LLP - Conversion Rate</h3>
+      <h3 class="title">Blackburn and Straus LLP - Cost per Signed Case</h3>
 
       <form action="" class="date-filter">
         <div>
@@ -51,8 +51,8 @@
             <option value="August">August</option>
             <option value="September">September</option>
             <option value="October">October</option>
-            <option value="November">JanuaryNovemberoption>
-            <option value="December">January</December>
+            <option value="November">November<option>
+            <option value="December">December</option>
           </select>
         </div>
 
@@ -71,39 +71,33 @@
       </form>
     </section>
 
-    <section class="header-graph">
-      <h3 class="title">Breakdown</h3>
+
+    <section class="chart-container">
       <div class="chart-box">
-        <canvas id="conversion-rate-breakdown" width="100%" height="200px"></canvas>
+        <canvas id="cost-per-signed-line" width="100%" height="300px"></canvas>
       </div>
     </section>
 
     <section class="chart-container">
       <div class="chart-box">
-        <canvas id="conversion-rate-line" width="100%" height="300px"></canvas>
-      </div>
-    </section>
-
-    <section class="chart-container">
-      <div class="chart-box">
-        <canvas id="conversion-rate-bar" width="auto" height="300px"></canvas>
+        <canvas id="cost-per-signed-bar" width="auto" height="300px"></canvas>
       </div>
     </section>
 
 
     <section class="chart-container">
-      <h3>Conversion Rate by Case Type</h3>
+      <h3 class="title">Cost per Signed by Case Type</h3>
       <p>(signed / accepted)</p>
       <div class="chart-box">
-        <canvas id="conversion-rate-by-type-bar" width="100%" height="300px"></canvas>
+        <canvas id="cost-per-signed-by-type-bar" width="100%" height="300px"></canvas>
       </div>
     </section>
 
 
-    <script async defer type="text/ecmascript" src="../assets/js/conversionRateBreakdown.js"></script>
-    <script async defer type="text/ecmascript" src="../assets/js/conversionRateLine.js"></script>
-    <script async defer type="text/ecmascript" src="../assets/js/conversionRateBar.js"></script>
-    <script async defer type="text/ecmascript" src="../assets/js/conversionRateByTypeBar.js"></script>
+
+    <script async defer type="text/ecmascript" src="../assets/js/cost-per-signed-line.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/cost-per-signed-bar.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/cost-per-signed-by-type-bar.js"></script>
 
   </body>
 </html>

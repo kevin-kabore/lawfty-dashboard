@@ -6,12 +6,14 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="menu-bar">
       <div>
-        <h3><a class="nav-link" href="/">LAWFTY</a></h3>
+        <h3><a class="nav-link" href="./index.html">LAWFTY</a></h3>
         <nav>
           <li><a class="nav-link" href="">Operations</a></li>
           <li><a class="nav-link" href="">Landing Pages</a></li>
@@ -20,8 +22,8 @@
       </div>
       <ul>
         <li>GA UX Students</li>
-        <li></li>
-        <li></li>
+        <li><i class="fas fa-user"></i></li>
+        <li><i class="fas fa-sign-out-alt"></i></li>
       </ul>
     </header>
 
@@ -72,9 +74,9 @@
       </form>
     </section>
 
-    <section class"chart-container">
+    <section class="chart-container">
       <h3 class="title">Case Pipeline</h3>
-      <div class="chart-box" style="width:56%" >
+      <div class="chart-box">
         <canvas id="casePipeline" width="100%" height="200px"></canvas>
       </div>
     </section>
@@ -83,19 +85,28 @@
 
       <div class="want-ratio">
         <div class="yellow-bar">&nbsp;</div>
-        <h3>Want Ratio</h3>
-        <h1>50%</h1>
-        <p class="fraction">(50 of 100)</p>
-        <p class="desc">Percentage of passed cases accepted by the firm</p>
-        <a href="./views/wantRatio.html">View Detail ---></a>
+        <div class="info-container">
+          <h3>Want Ratio</h3>
+          <h1>50%</h1>
+          <p class="fraction">(50 of 100)</p>
+          <p class="desc">Percentage of passed cases accepted by the firm</p>
+          <a href="./views/want-ratio.html">View Detail ---></a>
+        </div>
+
+        <div class="graph-tile chart-box hide">
+          <canvas id="tile-want-ratio-line"></canvas>
+        </div>
       </div>
+
+
+
       <div class="conversion-rate">
         <div class="yellow-bar">&nbsp;</div>
         <h3>Conversion Rate</h3>
         <h1>70%</h1>
         <p class="fraction">(50 of 100)</p>
         <p class="desc">Percentage of accepted cases signed by the firm</p>
-        <a href="./views/conversionRate.html">View Detail ---></a>
+        <a href="./views/conversion-rate.html">View Detail ---></a>
       </div>
 
       <div class="cost-per-case">
@@ -107,7 +118,7 @@
           <p>Lawfty: $294</p>
           <p>Partner: $294</p>
         </div>
-        <a href="./views/costPerCase.html">View Detail ---></a>
+        <a href="./views/cost-per-case.html">View Detail ---></a>
       </div>
 
       <div class="cost-per-signed">
@@ -119,7 +130,7 @@
           <p>Lawfty: $635</p>
           <p>Partner: $635</p>
         </div>
-        <a href="">View Detail ---></a>
+        <a href="./views/cost-per-signed.html">View Detail ---></a>
       </div>
       <div class="avg-fee-per-case">
         <div class="green-bar">&nbsp;</div>
@@ -130,26 +141,9 @@
           <p>Lawfty: $294</p>
           <p>Partner: $294</p>
         </div>
-        <a href="">View Detail ---></a>
+        <a href="./views/avg-fee-per-case.html">View Detail ---></a>
       </div>
 
-      <div class="drop-rate">
-        <div class="yellow-bar">&nbsp;</div>
-        <h3>Drop Rate</h3>
-        <h1>14%</h1>
-        <p class="fraction">(5 of 36)</p>
-        <p class="desc">Percentage of signed cases <br> ultimately dropped</p>
-        <a href="">View Detail ---></a>
-      </div>
-
-      <div class="referral-rate">
-        <div class="green-bar">&nbsp;</div>
-        <h3>Referral Rate</h3>
-        <h1>3%</h1>
-        <p class="fraction">(50 of 100)</p>
-        <p class="desc">Percentage of passed cases <br> re-referred by the firm</p>
-        <a href="">View Detail ---></a>
-      </div>
 
       <div class="case-type-breakdown" style="padding-top:23.5px">
         <h3>Case Type Breakdown</h3>
@@ -157,29 +151,48 @@
           <canvas id="case-type-breakdown"></canvas>
         </div>
 
-        <a href="">View Detail ---></a>
+        <a href="./views/case-type-breakdown.html">View Detail ---></a>
       </div>
 
       <div class="avg-age-active-classes">
         <div class="red-bar">&nbsp;</div>
         <h3>Average Age of <br /> Active Classes</h3>
         <h1>167 days</h1>
-        <p class="fraction">167 days</p>
-        <a href="">View Detail ---></a>
+        <a href="./views/avg-age.html">View Detail ---></a>
       </div>
+
+
+      <div class="drop-rate">
+        <div class="yellow-bar">&nbsp;</div>
+        <h3>Drop Rate</h3>
+        <h1>14%</h1>
+        <p class="fraction">(5 of 36)</p>
+        <p class="desc">Percentage of signed cases <br> ultimately dropped</p>
+        <a href="./views/drop-rate.html">View Detail ---></a>
+      </div>
+
+    <div class="referral-rate">
+      <div class="green-bar">&nbsp;</div>
+      <h3>Referral Rate</h3>
+      <h1>3%</h1>
+      <p class="fraction">(50 of 100)</p>
+      <p class="desc">Percentage of passed cases <br> re-referred by the firm</p>
+      <a href="./views/referral-rate.html">View Detail ---></a>
+    </div>
+
 
       <div class="time-on-desk-settled">
         <div class="green-bar">&nbsp;</div>
         <h3>Time on Desk <br />(settled)</h3>
         <h1>90 days</h1>
-        <a href="">View Detail ---></a>
+        <a href="./views/time-on-desk-settled.html">View Detail ---></a>
       </div>
 
       <div class="time-on-desk-dropped">
         <div class="yellow-bar">&nbsp;</div>
         <h3>Time on desk <br />(dropped)</h3>
         <h1>81 days</h1>
-        <a href="">View Detail ---></a>
+        <a href="./views/time-on-desk-dropped.html">View Detail ---></a>
       </div>
 
       <div class="roi-to-date">
@@ -189,7 +202,7 @@
           <p>1.5x <br /> Lawfty</p>
           <p>4x <br /> Partner</p>
         </div>
-        <a href="">View Detail ---></a>
+        <a href="./views/roi-to-date.html">View Detail ---></a>
       </div>
       <div class="anticipated-roi-calc" style="padding-top:23.5px">
         <h3>Anticipated ROI Calculator</h3>
@@ -203,7 +216,30 @@
       </div>
     </section>
 
-    <script async defer type="text/ecmascript" src="./assets/js/barCasePipeline.js"></script>
-    <script async defer type="text/ecmascript" src="./assets/js/pieCaseTypeBreakdown.js"></script>
+    <script async defer type="text/ecmascript" src="./assets/js/bar-case-pipeline.js"></script>
+    <script async defer type="text/ecmascript" src="./assets/js/pie-case-type-breakdown.js"></script>
+    <script type="text/javascript">
+      $('.info-container').on('click', toggleTile);
+      $('.graph-tile').on('click', function(){
+        window.location.href = "./index.html";
+      });
+
+      function toggleTile(){
+        console.log('Log from function');
+        $('.tile-script').remove();
+        $('.info-container').toggleClass('hide');
+        $('.graph-tile').toggleClass('hide');
+
+        // DOM: Create the script element
+        var jsElm = document.createElement("script");
+        // set the type attribute
+        jsElm.type = "application/javascript";
+        // make the script element load file
+        jsElm.src = './assets/js/tile-want-ratio-line.js';
+        // set id
+        $(jsElm).attr('id', 'tile-script')
+        document.body.appendChild(jsElm);
+      }
+    </script>
   </body>
 </html>

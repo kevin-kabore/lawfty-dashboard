@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Vintage View Dashboard</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
   </head>
-  <body id="wantRatioPage">
+  <body id="drop-rate-page">
     <header class="menu-bar">
       <div>
         <h3><a class="nav-link" href="../index.html">LAWFTY</a></h3>
@@ -20,8 +20,8 @@
       </div>
       <ul>
         <li>GA UX Students</li>
-        <li></li>
-        <li></li>
+        <li><i class="fas fa-user"></i></li>
+        <li><i class="fas fa-sign-out-alt"></i></li>
       </ul>
     </header>
 
@@ -35,7 +35,7 @@
     </div>
 
     <section class="dashboard-header">
-      <h3 class="title">Blackburn and Straus LLP - Want Ratio</h3>
+      <h3 class="title">Blackburn and Straus LLP - Drop Rate</h3>
 
       <form action="" class="date-filter">
         <div>
@@ -51,8 +51,8 @@
             <option value="August">August</option>
             <option value="September">September</option>
             <option value="October">October</option>
-            <option value="November">JanuaryNovemberoption>
-            <option value="December">January</December>
+            <option value="November">Novembe></option>
+            <option value="December">December</option>
           </select>
         </div>
 
@@ -74,35 +74,35 @@
     <section class="header-graph">
       <h3 class="title">Breakdown</h3>
       <div class="chart-box">
-        <canvas id="want-ratio-breakdown" width="100%" height="200px"></canvas>
+        <canvas id="drop-rate-breakdown" width="100%" height="200px"></canvas>
       </div>
     </section>
 
     <section class="chart-container">
       <div class="chart-box">
-        <canvas id="want-ratio-line" width="100%" height="300px"></canvas>
+        <canvas id="drop-rate-line" width="100%" height="300px"></canvas>
       </div>
     </section>
 
     <section class="chart-container">
       <div class="chart-box">
-        <canvas id="want-ratio-bar" width="100%" height="300px"></canvas>
+        <canvas id="drop-rate-bar" width="100%" height="300px"></canvas>
       </div>
     </section>
 
 
     <section class="chart-container">
-      <h3>Want Ratio by Case Type</h3>
+      <h3 class="title">Drop Rate by Case Type</h3>
       <div class="chart-box">
-        <canvas id="want-ratio-by-type-bar" width="100%" height="300px"></canvas>
+        <canvas id="drop-rate-by-type-bar" width="100%" height="300px"></canvas>
       </div>
     </section>
 
 
-    <script async defer type="text/ecmascript" src="../assets/js/wantRatioBreakdown.js"></script>
-    <script async defer type="text/ecmascript" src="../assets/js/wantRatioLine.js"></script>
-    <script async defer type="text/ecmascript" src="../assets/js/wantRatioBar.js"></script>
-    <script async defer type="text/ecmascript" src="../assets/js/wantRatioByTypeBar.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/drop-rate-breakdown.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/drop-rate-line.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/drop-rate-bar.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/drop-rate-by-type-bar.js"></script>
 
   </body>
 </html>

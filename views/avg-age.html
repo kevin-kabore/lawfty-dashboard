@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vintage View Dashboard</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+  </head>
+  <body id="avg-age-page">
+    <header class="menu-bar">
+      <div>
+        <h3><a class="nav-link" href="../index.html">LAWFTY</a></h3>
+        <nav>
+          <li><a class="nav-link" href="">Operations</a></li>
+          <li><a class="nav-link" href="">Landing Pages</a></li>
+          <li><a class="nav-link" href="">Analytics</a></li>
+        </nav>
+      </div>
+      <ul>
+        <li>GA UX Students</li>
+        <li><i class="fas fa-user"></i></li>
+        <li><i class="fas fa-sign-out-alt"></i></li>
+      </ul>
+    </header>
+
+    <div class="legend-container">
+      <a href="../index.html">Back to Dashboard</a>
+      <ul class="legend">
+        <li class="excellent">Excellent</li>
+        <li class="good">Good</li>
+        <li class="poor">Poor</li>
+      </ul>
+    </div>
+
+    <section class="dashboard-header">
+      <h3 class="title">Blackburn and Straus LLP - Average Age of Active Cases</h3>
+
+      <form action="" class="date-filter">
+        <div>
+          <select class="" name="">
+            <option value="This month">This month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November<option>
+            <option value="December">December</option>
+          </select>
+        </div>
+
+        <div class="col-container">
+          <label for="">Start date</label>
+          <input type="date" name="" value="">
+        </div>
+        <div class="col-container">
+          <label for="">End date</label>
+          <input type="date" name="" value="">
+        </div>
+
+        <div>
+          <input type="submit" name="" value="Go!">
+        </div>
+      </form>
+    </section>
+
+
+    <section class="chart-container">
+      <h3 class="title">Average Age of Active Classes</h3>
+      <p>(Days)</p>
+      <div class="chart-box">
+        <canvas id="avg-age-by-type-bar" width="100%" height="300px"></canvas>
+      </div>
+    </section>
+
+
+
+    <script async defer type="text/ecmascript" src="../assets/js/avg-age-line.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/avg-age-bar.js"></script>
+    <script async defer type="text/ecmascript" src="../assets/js/avg-age-by-type-bar.js"></script>
+
+  </body>
+</html>

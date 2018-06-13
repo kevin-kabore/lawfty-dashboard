@@ -3,11 +3,11 @@
   // pieCTB.canvas.width = 1000;
 
   /*** Gradient ***/
-  var gradient = costPerCaseLine.createLinearGradient(0,0,0,300);
-      gradient.addColorStop(1, 'rgba(111, 213, 152, 0.8)');
-      // gradient.addColorStop(0.4, 'rgba(249, 211, 80, 0.1)');
-      gradient.addColorStop(0, 'rgba(249, 211, 80, 0.6)');
-      // gradient.addColorStop(1, 'rgba(237, 104, 99, 1)');
+  var gradient = costPerCaseLine.createLinearGradient(0,0,0,200);
+      gradient.addColorStop(1, 'rgba(111, 213, 152, 1)');
+      // gradient.addColorStop(0.3, 'rgba(111, 213, 152, 0.8)');
+      gradient.addColorStop(0.4, 'rgba(249, 211, 80, 0.7)');
+      gradient.addColorStop(0, 'rgba(249, 211, 80, 1)');
 
   /***************/
 
@@ -18,15 +18,11 @@
           datasets: [{
               data: [599, 633, 633, 475, 588],
               backgroundColor: gradient,
-              fillColor : gradient,
-              strokeColor : gradient,
               borderWidth: 5
           },{
               data: [467, 501, 501, 343, 458],
-              backgroundColor: gradient,
-              fillColor : gradient,
-              strokeColor : 'black',
-              borderWidth: 5
+              borderWidth: 5,
+              borderColor: 'black'
           }]
       },
       options: {
@@ -41,13 +37,14 @@
                     }
                   },
                   gridLines: {
-                    display: false
+                    display: false,
+                    drawBorder: false
                   }
               }],
               xAxes: [{
                 ticks: {
                   beginsAtZero: true,
-                  display: false
+                  // display: false
                 },
                 gridLines: {
                   // display: false

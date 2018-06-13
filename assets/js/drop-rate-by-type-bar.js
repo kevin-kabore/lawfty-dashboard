@@ -1,25 +1,25 @@
-var costPerCaseByTypeBar = document.getElementById("cost-per-case-by-type-bar").getContext('2d');
+var dropRateByTypeBar = document.getElementById("drop-rate-by-type-bar").getContext('2d');
 // ctx.height = 200px;
 // ctx.width = 100;
-var cPCBTBar = new Chart(costPerCaseByTypeBar, {
+var dRBTBar = new Chart(dropRateByTypeBar, {
     type: 'horizontalBar',
     data: {
         datasets: [{
-            label: 'MVA (90 cases)',
-            data: [588],
+            label: 'MVA (0 dropped)',
+            data: [0],
+            // backgroundColor: '#6fd598'
+        },{
+            label: 'Premises (2 dropped / 14 signed)',
+            data: [14],
             backgroundColor: '#f2c94c'
         },{
-            label: 'Premises (34 cases)',
-            data: [643],
+            label: 'WC (3 dropped / 21 signed)',
+            data: [14],
             backgroundColor: '#f2c94c'
         },{
-            label: 'WC (31 cases)',
-            data: [701],
-            backgroundColor: '#ed6863'
-        },{
-            label: 'Other (20 cases)',
-            data: [588],
-            backgroundColor: '#f2c94c'
+            label: 'Other (0 dropped)',
+            data: [0],
+            // backgroundColor: '#f2c94c'
         }
       ]
     },
@@ -29,6 +29,7 @@ var cPCBTBar = new Chart(costPerCaseByTypeBar, {
             xAxes: [{
               ticks: {
                 // display: true,
+                max: 25,
                 beginAtZero: true,
                 callback: function(value, index, values) {
                     return value + '%';

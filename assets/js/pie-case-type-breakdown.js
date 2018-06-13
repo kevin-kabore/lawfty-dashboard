@@ -31,7 +31,8 @@
                     display: false
                   },
                   gridLines: {
-                    display: false
+                    display: false,
+                    drawBorder: false
                   }
               }],
               xAxes: [{
@@ -39,7 +40,8 @@
                   display: false
                 },
                 gridLines: {
-                  display: false
+                  display: false,
+                  drawBorder: false
                 }
               }]
           },
