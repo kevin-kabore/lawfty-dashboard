@@ -151,7 +151,19 @@ section p {
   margin: 10px 10px;
 }
 
+#show-table {
+  background: url(../images/tableview.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  padding: 20px;
+}
 
+#show-graphs {
+  background: url(../images/graphview.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  padding: 20px;
+}
 
 /* Dashboard Styles */
 .dashboard-header {
